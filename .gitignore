@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local configuration and credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Model and generated retrieval caches
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.faiss
+osha_rules_keys.json
+osha_rules.hash
+
+# Run outputs and logs
+output/
+outputs/
+results/
+runs/
+*.log
+
+# Local/private data
+data/private/
+datasets/private/
+private_data/
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
