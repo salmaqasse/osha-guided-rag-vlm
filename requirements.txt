@@ -1,0 +1,12 @@
+# Install a CUDA-enabled PyTorch build separately using the official PyTorch selector:
+# https://pytorch.org/get-started/locally/
+#
+# This file lists the remaining direct runtime dependencies. Versions are not pinned
+# because the original tested environment's package lock was not supplied.
+accelerate
+bitsandbytes
+faiss-cpu
+Pillow
+qwen-vl-utils
+sentence-transformers
+transformers

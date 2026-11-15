@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/osha-rules.schema.json",
+  "title": "OSHA RAG-VLM rule library schema",
+  "description": "Structural schema matching the required fields validated by osha_rag_vlm.py. This schema does not verify the legal accuracy or currency of rule content.",
+  "type": "object",
+  "minProperties": 1,
+  "additionalProperties": {
+    "type": "object",
+    "required": [
+      "category",
+      "official_source",
+      "official_source_url",
+      "official_text",
+      "interpretation",
+      "visual_trigger",
+      "confirmation_threshold",
+      "uncertainty_policy",
+      "consistency_rule",
+      "source_type",
+      "last_verified"
+    ],
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "Fall Hazards",
+          "Struck-by / Equipment Hazards",
+          "Caught-in/Between Hazards",
+          "Electrical / Electrocution Hazards",
+          "PPE Compliance Concern"
+        ]
+      },
+      "official_source": {"type": "string", "minLength": 1},
+      "official_source_url": {"type": "string", "minLength": 1},
+      "official_text": {"type": "string", "minLength": 1},
+      "interpretation": {"type": "string", "minLength": 1},
+      "visual_trigger": {"type": "string", "minLength": 1},
+      "confirmation_threshold": {"type": "string", "minLength": 1},
+      "uncertainty_policy": {"type": "string", "minLength": 1},
+      "consistency_rule": {"type": "string", "minLength": 1},
+      "source_type": {"type": "string", "minLength": 1},
+      "last_verified": {"type": "string", "minLength": 1}
+    },
+    "additionalProperties": true
+  }
+}
